@@ -35,9 +35,19 @@ v-change-user-package admin default
 v-delete-domain admin default.domain
 
 #remove unused directories from template
-sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/private/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/cgi-bin/d' /usr/local/vesta/bin/v-add-web-domain
+sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
+
+#sed -i '/cp.*public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
+#sed -i '/cp.*cgi-bin/d' /usr/local/vesta/bin/v-add-web-domain
+
+#sed -i '/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
+#sed -i '/cgi-bin/d' /usr/local/vesta/bin/v-add-web-domain
+
+#sed -i '/cp.*public_shtml.*$/,+2d' /usr/local/vesta/bin/v-add-web-domain
+#sed -i '/cp.*cgi-bin.*$/,+2d' /usr/local/vesta/bin/v-add-web-domain
+#sed -i '$!N; /^\(.*\)\n\1$/d' /usr/local/vesta/bin/v-add-web-domain
 
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
