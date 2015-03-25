@@ -38,3 +38,7 @@ v-delete-domain admin default.domain
 sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/private/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/cgi-bin/d' /usr/local/vesta/bin/v-add-web-domain
+
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp
