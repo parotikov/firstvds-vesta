@@ -22,3 +22,14 @@ chkconfig nginx off
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/my.cnf
 cp /etc/my.cnf /etc/my.cnf.old
 mv my.cnf /etc/my.cnf
+
+# remove preloaded packages
+v-delete-user-package palegreen
+v-delete-user-package gainsboro
+v-delete-user-package slategrey
+
+# change package for admin
+v-change-user-package admin default
+
+# remove default.domain for admin
+v-delete-domain admin default.domain
