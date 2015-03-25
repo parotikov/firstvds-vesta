@@ -34,6 +34,7 @@ v-change-user-package admin default
 # remove default.domain for admin
 v-delete-domain admin default.domain
 
+#remove unused directories from template
 sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/private/d' /usr/local/vesta/bin/v-add-web-domain
 sed -i '/\$domain\/cgi-bin/d' /usr/local/vesta/bin/v-add-web-domain
