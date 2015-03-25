@@ -18,3 +18,7 @@ chsh -s /bin/zsh
 chkconfig named off
 chkconfig dovecot off
 chkconfig nginx off
+
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/my.cnf
+cp /etc/my.cnf /etc/my.cnf.old
+mv my.cnf /etc/my.cnf
