@@ -56,3 +56,6 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
+
+wget http://adminer.org/latest.php
+cp latest.php /usr/share/adminer/index.php
