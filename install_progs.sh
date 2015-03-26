@@ -48,3 +48,6 @@ sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
+
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
