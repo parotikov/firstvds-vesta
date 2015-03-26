@@ -45,6 +45,11 @@ sed -i '/\$domain\/public_shtml/d' /usr/local/vesta/bin/v-add-web-domain
 #sed -i '/cp.*cgi-bin.*$/,+2d' /usr/local/vesta/bin/v-add-web-domain
 #sed -i '$!N; /^\(.*\)\n\1$/d' /usr/local/vesta/bin/v-add-web-domain
 
+#disable phpmyadmin
+sed -e '/alias \/phpmyadmin/ s/^#*/#/I' -i /etc/httpd/conf.d/phpMyAdmin.conf
+sed -e '/Alias \/phpMyAdmin/ s/^#*/#/I' -i /etc/httpd/conf.d/phpMyAdmin.conf
+service httpd restart
+
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
