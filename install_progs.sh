@@ -65,4 +65,4 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
-echo 'alias tmux="tmux attach || tmux new"' > ~/.zshrc
+echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
