@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo yum install zsh mtr nano vim htop git composer ctags
+sudo yum install zsh mtr nano vim htop git composer ctags tmux
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -64,3 +64,4 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
