@@ -66,3 +66,5 @@ mv composer.phar /usr/local/bin/composer
 
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
 echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/watcher.sh
+chmod +x ./watcher.sh
