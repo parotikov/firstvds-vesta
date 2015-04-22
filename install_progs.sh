@@ -1,11 +1,18 @@
 #!/bin/bash
-sudo yum install zsh mtr nano vim htop git composer ctags tmux
+sudo yum install -y wget zsh mtr nano vim git ctags
+wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
+rpm -Uhv rpmforge-release*.rf.x86_64.rpm
+
+sudo yum install -y nano htop tmux mc
+
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
+echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
 
 /usr/local/vesta/bin/v-stop-service named
 /usr/local/vesta/bin/v-stop-service dovecot
@@ -64,7 +71,5 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
-echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/watcher.sh
 chmod +x ./watcher.sh
