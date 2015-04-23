@@ -80,3 +80,4 @@ rpm --import http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG
 yum install -y yandex-disk
 echo "yandex-disk start" >> /etc/init.d/rc.local
 yandex-disk setup
+yandex-disk start
