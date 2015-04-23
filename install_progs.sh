@@ -74,4 +74,9 @@ mv composer.phar /usr/local/bin/composer
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/watcher.sh
 chmod +x ./watcher.sh
 
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/yandex.repo
+mv yandex.repo /etc/yum.repos.d/yandex.repo
+rpm --import http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG
+yum install -y yandex-disk
 echo "yandex-disk start" >> /etc/init.d/rc.local
+yandex-disk setup
