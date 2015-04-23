@@ -3,7 +3,7 @@ sudo yum install -y wget zsh mtr nano vim git ctags
 wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm
 rpm -Uhv rpmforge-release*.rf.x86_64.rpm
 
-sudo yum install -y nano htop tmux mc
+sudo yum install -y nano htop tmux mc pwgen
 
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
