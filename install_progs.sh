@@ -73,3 +73,5 @@ mv composer.phar /usr/local/bin/composer
 
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/watcher.sh
 chmod +x ./watcher.sh
+
+echo "yandex-disk start" >> /etc/init.d/rc.local
