@@ -11,6 +11,10 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
+curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/nik.zsh-theme
+mv nik.zsh-theme ~/.oh-my-zsh/themes
+sed -i 's/^ZSH_THEME="robbyrussell".*/ZSH_THEME="nik"/g' ~/.zshrc 
+
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
 echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
 
