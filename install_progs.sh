@@ -83,8 +83,8 @@ yandex-disk setup
 yandex-disk start
 
 #change ssh port
-sed -i 's/^.*Port .*/Port 39001/g' /etc/ssh/sshd_config
+#sed -i 's/^.*Port .*/Port 39001/g' /etc/ssh/sshd_config
 #and disable root login
-sed -i 's/^PermitRootLogin.*/PermitRootLogin no/g' /etc/ssh/sshd_config
+#sed -i 's/^PermitRootLogin.*/PermitRootLogin no/g' /etc/ssh/sshd_config
 #apply changes
-service sshd restart
+#service sshd restart
