@@ -82,7 +82,7 @@ curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/yandex
 mv yandex.repo /etc/yum.repos.d/yandex.repo
 rpm --import http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG
 yum install -y yandex-disk
-echo "yandex-disk start" >> /etc/init.d/rc.local
+echo "yandex-disk start" >> /etc/rc.local
 yandex-disk setup
 yandex-disk start
 
