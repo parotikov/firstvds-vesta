@@ -15,6 +15,8 @@ curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/nik.zs
 mv nik.zsh-theme ~/.oh-my-zsh/themes
 sed -i 's/^ZSH_THEME="robbyrussell".*/ZSH_THEME="nik"/g' ~/.zshrc 
 
+useradd nik -c 'Nik Parotikov' -s /bin/zsh -g wheel
+
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
 echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
 
