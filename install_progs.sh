@@ -20,13 +20,13 @@ useradd nik -c 'Nik Parotikov' -s /bin/zsh -g wheel
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/.tmux.conf
 echo 'alias tmux="tmux attach || tmux new"' >> ~/.zshrc
 
-/usr/local/vesta/bin/v-stop-service named
-/usr/local/vesta/bin/v-stop-service dovecot
-/usr/local/vesta/bin/v-stop-service nginx
+#/usr/local/vesta/bin/v-stop-service named
+#/usr/local/vesta/bin/v-stop-service dovecot
+#/usr/local/vesta/bin/v-stop-service nginx
 
-chkconfig named off
-chkconfig dovecot off
-chkconfig nginx off
+#chkconfig named off
+#chkconfig dovecot off
+#chkconfig nginx off
 
 curl -O https://raw.githubusercontent.com/parotikov/firstvds-vesta/master/my.cnf
 cp /etc/my.cnf /etc/my.cnf.old
